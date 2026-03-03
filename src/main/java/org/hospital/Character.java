@@ -2,11 +2,9 @@ package org.hospital;
 
 public abstract class Character {
     private String name;
-    private String specialConditions;
 
-    public Character(String name, String specialConditions) {
+    public Character(String name) {
         this.name = name;
-        this.specialConditions = specialConditions;
     }
 
     public String getName() {
@@ -15,13 +13,5 @@ public abstract class Character {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSpecialConditions() {
-        return specialConditions;
-    }
-
-    public void setSpecialConditions(String specialConditions) {
-        this.specialConditions = specialConditions;
     }
 }
