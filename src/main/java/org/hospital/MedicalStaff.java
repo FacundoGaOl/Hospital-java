@@ -35,4 +35,5 @@ public abstract class MedicalStaff extends Character implements Workable{
     public void eat() {
 
     }
+    public abstract String description();
 }

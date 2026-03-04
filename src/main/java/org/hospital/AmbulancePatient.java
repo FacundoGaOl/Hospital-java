@@ -29,4 +29,13 @@ public class AmbulancePatient extends Patient implements InOutHospital{
     public void giveRoom() {
 
     }
+
+    @Override
+    public String description() {
+        return "PACIENTE DE AMBULANCIA: " + getName() +
+                "\n > ESTADO CRÍTICO | Habitación: " + getRoom() +
+                "\n > Cirugía realizada: " + dateSurgery +
+                "\n > Plan de rehabilitación: " + rehabilitation +
+                "\n > Alta prevista: " + getDischargeDate();
+    }
 }

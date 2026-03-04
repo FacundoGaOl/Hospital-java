@@ -22,7 +22,7 @@ public class Main {
     Character[] Characters = {alberto, javier, david, daniel,vlad, dorian, alex, ana};
 
     for (Character person : Characters) {
-        System.out.println(person.getName());
+        System.out.println(person.description());
     }
     }
 }

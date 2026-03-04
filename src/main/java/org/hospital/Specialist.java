@@ -25,4 +25,12 @@ public class Specialist extends MedicalStaff {
     public void setMedicalSpecialty(String medicalSpecialty) {
         this.medicalSpecialty = medicalSpecialty;
     }
+
+    @Override
+    public String description() {
+        return "MÉDICO ESPECIALISTA: Dr/a. " + getName() +
+                "\n > Especialidad: " + medicalSpecialty +
+                "\n > Turno: " + getWorkShift() + " | Comida: " + getMealShift() +
+                "\n > Vacaciones acumuladas: " + holidays + " días.";
+    }
 }

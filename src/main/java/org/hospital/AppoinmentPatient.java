@@ -45,4 +45,12 @@ public class AppoinmentPatient extends Patient{
     public void giveRoom() {
 
     }
+
+    @Override
+    public String description() {
+        return "PACIENTE DE CONSULTA: " + getName() +
+                "\n > Ingreso: " + getAdmissionDate() + " | Habitación: " + getRoom() +
+                "\n > Tratamiento: " + getTreatment() +
+                "\n > Control: " + nurseControl + " | Próxima cita: " + appointment;
+    }
 }

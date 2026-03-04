@@ -45,4 +45,6 @@ public abstract class Patient extends Character implements AboutPatients, InOutH
     public void setDischargeDate(String dischargeDate) {
         this.dischargeDate = dischargeDate;
     }
+
+    public abstract String description();
 }

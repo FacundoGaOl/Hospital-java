@@ -2,12 +2,12 @@ package org.hospital;
 
 public class Student extends MedicalStaff{
     private String course;
-    private String Study;
+    private String study;
 
     public Student(String name, String workShift, String mealShift, String course, String study) {
         super(name, workShift, mealShift);
         this.course = course;
-        Study = study;
+        this.study = study;
     }
 
     public String getCourse() {
@@ -19,10 +19,17 @@ public class Student extends MedicalStaff{
     }
 
     public String getStudy() {
-        return Study;
+        return study;
     }
 
     public void setStudy(String study) {
-        Study = study;
+        this.study = study;
+    }
+
+    @Override
+    public String description() {
+        return "MÉDICO ESTUDIANTE: " + getName() +
+                "\n > Nivel: " + course + " | Horas de estudio/semana: " + study +
+                "\n > Turno de prácticas: " + getWorkShift();
     }
 }
