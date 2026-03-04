@@ -1,17 +1,28 @@
 package org.hospital;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import org.hospital.AmbulancePatient;
+import org.hospital.AppoinmentPatient;
+import org.hospital.Specialist;
+import org.hospital.Student;
+
 public class Main {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+        Character alberto = new AppoinmentPatient ("Alfredo Diaz", "2026-03-01", 101,"Rest and Water","2026-03-05", "2026-03-05", "Nurse Joy");
+        Character javier = new  AppoinmentPatient ("Javier Longueira", "2026-03-02", 105, "2026-03-04", "Vitamin B12", "Follow-up", "Nurse Ratched");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        Character david = new AmbulancePatient ("David Alvarez", "2026-03-03", 304, "2026-03-20", "Antibiotics", "Leg Surgery", "Physical Therapy");
+        Character daniel = new AmbulancePatient ("Daniel Vallejo", "2026-03-03", 206, "Pending", "Painkillers", "Shoulder Surgery", "Restricted Movement");
+
+        Character dorian = new Specialist("Dorian Gray", "14:00 - 15:00", "Day Shift", "30", "Diagnostic Medicine");
+        Character vlad = new Specialist("Vlad Tepes", "13:00 - 14:00", "Night Shift", "25", "General Surgery");
+
+        Character alex = new Student("Alex Sanchez", "12:00 - 13:00", "Rotation Shift", "4th Year", "20");
+        Character ana = new Student("Ana Dominguez", "12:30 - 13:30", "Rotation Shift", "3rd Year", "25");
+
+    Character[] Characters = {alberto, javier, david, daniel,vlad, dorian, alex, ana};
+
+    for (Character person : Characters) {
+        System.out.println(person.getName());
+    }
     }
 }
